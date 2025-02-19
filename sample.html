@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap based website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+      .alert{
+        position: sticky;
+        top:10px;
+      }
+      .icons{
+        position: absolute;
+        right:40px;
+      }
+      .dropdown{
+        margin-left:10px;
+      }
+      td{
+        text-transform:capitalize;
+      }
+      .fa-eye{
+        color: black;
+        padding: 10px;
+      }.fa-eye:hover{
+        cursor: pointer;
+        transform: scale(2.0);
+      }
+      .fa-edit{
+        padding: 10px;
+        color:darkgoldenrod;
+      }
+      .fa-edit:hover{
+        transform: scale(2.0);
+        cursor: pointer;
+      }
+      .fa-trash{
+        padding: 10px;
+        color: red;
+      }
+      .fa-trash:hover{
+        cursor:pointer;
+        transform:scale(2.0);
+      }
+      .container{
+        width:800px;
+        margin-left: 0px;
+      }
+      .progress{
+        margin:20px;
+        font-weight: bolder;
+        font-size: larger;
+      }
+      .pagination{
+        margin-right:50px;
+      }
+
+  </style>
+
+</head>
+<body>
+
+    <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button"class="close"data-dismiss="alert">&times</button>
+        ALERT!!<br>Pending Reg?<br>
+         Please fill the form before restriction to access <a href="#"class="alert-link">click here</a>
+    </div>
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">section</a></li>
+            <li class="breadcrumb-item active"aria-current="page">customer details</li>
+        </ul>
+    <div class="dropdown dropleft">
+        <button type="button"class="btn btn-secondary dropdown-toggle "data-toggle="dropdown">MENU <i class="fa fa-bars"></i></button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Home</a>
+            <a href="#"class="dropdown-item">About us</a>
+            <a href="#"class="dropdown-item">Status</a>
+        </div>
+    </div>    
+    
+    <div class="icons">
+        <button type="button" class="btn "><i class="fa fa-bell"></i><sup class="badge-pill bg-danger text-white">18</sup></button>
+        <button type="button"class="btn"><i class="fa fa-user"></i></button>
+        <button type="button"class="btn"><i class="fa fa-cog"></i></button>
+    </div>
+    <br>
+    <h1 class="display-3" style="text-align: center;">Customer Details</h1>
+    <br>
+    
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark ">
+               <tr > 
+                <th>#</th>
+                <th>Name<i class="fa fa-sort-up"></i><i class="fa fa-sort-down"></i></th>
+                <th>Address</th>
+                <th>City<i class="fa fa-sort-up"></i><i class= "fa fa-sort-down"></i></th>
+                <th>Pincode</th>
+                <th>Country<i class="fa fa-sort-up"></i><i class="fa fa-sort-down"></i></th>
+                <th>Action</th>
+               </tr>
+            </thead>
+            <tbody >
+                <tr class="table-info">
+                   <td>1</td>
+                   <td>thomas hardy</td>
+                   <td>89 chiarsco road</td>
+                   <td>portland</td>
+                   <td>91219</td>
+                   <td>USA</td>
+                   <td ><i class="fa fa-eye"> </i><i class="fa fa-edit"> </i><i class="fa fa-trash"></i></td> 
+                </tr>
+                <tr class="table-info">
+                    <td>2</td>
+                    <td>maria anders</td>
+                    <td>oberer str 75</td>
+                    <td>berlin</td>
+                    <td>12209</td>
+                    <td>germany</td>
+                    <td><i class="fa fa-eye"> </i><i class="fa fa-edit"> </i><i class="fa fa-trash"></i></td>
+                </tr>
+                <tr class="table-info">
+                    <td>3</td>
+                    <td>fran wilson</td>
+                    <td>c/ araquil,67</td>
+                    <td>madrid</td>
+                    <td>28023</td>
+                    <td>spain</td>
+                    <td><i class="fa fa-eye"> </i><i class="fa fa-edit"> </i><i class="fa fa-trash"></i></td>
+                </tr>
+                <tr class="table-info">
+                    <td>4</td>
+                    <td>dominic perrier</td>
+                    <td>25,rue lauriston</td>
+                    <td>paris</td>
+                    <td>75016</td>
+                    <td>france</td>
+                    <td><i class="fa fa-eye"> </i><i class="fa fa-edit"> </i><i class="fa fa-trash"></i></td>
+                </tr>
+                <tr class="table-info">
+                    <td>5</td>
+                    <td>martin blank</td>
+                    <td>via monteblanco 34</td>
+                    <td>turin</td>
+                    <td>10100</td>
+                    <td>italy</td>
+                    <td><i class="fa fa-eye"> </i><i class="fa fa-edit"> </i><i class="fa fa-trash"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <button data-toggle="collapse"data-target="#buff" class="btn btn-outline-info">Download PDF<sub class="spinner-grow spinner-grow-sm text-danger"></sub><sub class="spinner-grow spinner-grow-sm text-warning"></sub><sub class="spinner-grow spinner-grow-sm text-success"></sub></button>
+    <div id="buff"class="collapse"><br>
+        <div class="progress"style="height:30px;">
+           <div class="progress-bar progress-bar-striped progress-bar-animated bg-info " style="width:50%;height:100%;">50% downloading</div>
+        </div>  
+    </div>     
+    <br>
+    <div>
+        <ul class="pagination pagination-md justify-content-end">
+            <li class="page-item disabled"><a href="#"class="page-link ">previous</a></li>
+            <li class="page-item active"><a href="sample.html" class="page-link">1</a></li>
+            <li class="page-item"><a href="#"class="page-link">2</a></li>
+            <li class="page-item"><a href="#"class="page-link">3</a></li>
+            <li class="page-item"><a href="#"class="page-link">next</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+
+</body>
+</html>
